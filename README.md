@@ -17,22 +17,50 @@ Sistema para gerenciamento de eventos, palestras e workshops. Permite inscriçã
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
-- **Linguagem:** Java 21
+- **Linguagem:** Java
 - **Framework:** Spring Boot 3.4.5
 - **Banco de Dados:** MySQL
 - **ORM:** Spring Data JPA / Hibernate
-- **Ferramentas:** Git, Maven, Lombok
 
 ---
 
-## ✅ Funcionalidades
+## Principais Funcionalidades
 
-- [ ] Gerênciamento de Eventos *(em desenvolvimento)*
-- [ ] Sistema de criação de Eventos *(em desenvolvimento)*
-- [x] Mantimento de tags de competências para eventos
-- [ ] Cadastramento de participante *(em desenvolvimento)*
-- [ ] Geração de Certificado *(em desenvolvimento)*
+- [x] Manter Eventos
+- [x] Manter tags de competências para eventos
+- [x] Cadastramento de participante
+- [x] Geração de Certificado
 
 ---
+
+## Como Executar o Projeto (Docker)
+
+O projeto está totalmente containerizado — não é necessário instalar Java, Maven ou MySQL na sua máquina, apenas o Docker.
+
+### Pré-requisitos
+
+- Docker Desktop instalado e em execução
+
+### Passo a passo
+
+1. **Clone o repositório**
+```bash
+   git clone https://github.com/kleberAnderson/Muttley.git
+```
+
+2. **Suba os containers**
+```bash
+   docker compose up --build
+```
+
+   Na primeira execução, o Docker vai baixar as imagens necessárias e compilar o projeto — pode levar alguns minutos. Nas próximas vezes, basta:
+```bash
+   docker compose up
+   docker compose down -v
+```
+
+3. **Acesse o sistema**
+
+   Abra o navegador em: http://localhost:8092/
